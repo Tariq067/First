@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator </title>
+</head>
+<body>
+    <script>  
+        let a=Number(prompt("Please enter first number"))
+        let b=Number(prompt("Please enter second number"))
+        let operater=String(prompt('What you want to do'))
+        switch(operater)
+        {
+            case "+" :
+            {
+                console.log(a+b)
+                break
+            }
+            case "-" :
+            {
+                console.log(a-b)
+                break
+            }
+            case "*" :
+            {
+                console.log(a*b)
+                break
+            }
+            case "/" :
+            {
+                console.log(a/b)
+                break
+            }
+            default :
+            {
+                console.log("Invalid , please enter + , - , / or * ")
+                            }
+        }
+    </script>
+</body>
+</html>
