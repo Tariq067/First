@@ -7,9 +7,17 @@
 </head>
 <body>
    <script> 
-    let add=(a,b=9)=> a+b
-   
-   console.log(add(8))
-   </script> 
+   let arr=[10,15,20,25,30,35,40,55]
+   arr.forEach((v,i)=>
+{
+    console.log( "For each ",v,i)
+})
+let finalAns=arr.map((v,i)=>v+5)
+console.log( "map ", finalAns)
+let filterAns=arr.filter((v,i)=> v%2==0)
+console.log( "filter ", filterAns)
+let reduceAns=arr.reduce((total,v,i)=> total+v)
+console.log( "reduce ", reduceAns)
+</script> 
 </body>
 </html>
