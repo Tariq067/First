@@ -4,39 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Calculator </title>
-</head>
+    </head>
 <body>
-    <script>  
-        let a=Number(prompt("Please enter first number"))
-        let b=Number(prompt("Please enter second number"))
-        let operater=String(prompt('What you want to do'))
-        switch(operater)
-        {
-            case "+" :
-            {
-                console.log(a+b)
-                break
-            }
-            case "-" :
-            {
-                console.log(a-b)
-                break
-            }
-            case "*" :
-            {
-                console.log(a*b)
-                break
-            }
-            case "/" :
-            {
-                console.log(a/b)
-                break
-            }
-            default :
-            {
-                console.log("Invalid , please enter + , - , / or * ")
-                            }
-        }
+    Num 1 <input type="text" class="input" placeholder="Enter first number" /> <br/>
+    Num 2 <input type="text" class="input" placeholder="Enter second number" /> <br/>
+    Output <input type="text" class="input" placeholder="Output" /> <br/>
+    <button id="btn1"> Add </button>
+    <button id="btn2"> Subtract </button>
+    <button id="btn3"> Multiply </button>
+    <button id="btn4"> Divide </button>
+    <script> 
+        let btn1=document.querySelector("#btn1")
+        let btn2=document.querySelector("#btn2")
+        let btn3=document.querySelector("#btn3") 
+        let btn4=document.querySelector("#btn4") 
+        let allInput=document.querySelectorAll(".input")
+        btn1.addEventListener("click" , ()=>
+         {
+            let input1=Number(allInput[0].value);
+            let input2=Number(allInput[1].value);
+            let Output=input1+input2 ;
+            allInput[2].value=Output ;
+            allInput[0].value=""
+            allInput[1].value=""
+            
+        })
+        btn2.addEventListener("click" , ()=>
+         {
+            let input1=Number(allInput[0].value);
+            let input2=Number(allInput[1].value);
+            let Output=input1-input2 ;
+            allInput[2].value=Output ;
+            allInput[0].value=""
+            allInput[1].value=""
+            
+        })
+        btn3.addEventListener("click" , ()=>
+         {
+            let input1=Number(allInput[0].value);
+            let input2=Number(allInput[1].value);
+            let Output=input1*input2 ;
+            allInput[2].value=Output ;
+            allInput[0].value=""
+            allInput[1].value=""
+            
+        })
+        btn4.addEventListener("click" , ()=>
+         {
+            let input1=Number(allInput[0].value);
+            let input2=Number(allInput[1].value);
+            let Output=input1/input2 ;
+            allInput[2].value=Output ;
+            allInput[0].value=""
+            allInput[1].value=""
+            
+        })                 
     </script>
 </body>
 </html>
