@@ -7,9 +7,26 @@
 </head>
 <body>
     <h1 id="heading"> Welcome <u> to </u> wscube </h1>
-    <script>
-let head1=document.getElementById("heading")
-console.log(head1.innerHTML)
-    </script>
+    <p> This is a paragraph </p>
+    <input type="password" id="pass">  
+    <button onclick="showPassword()" id="btn"> show  </button>
 </body>
+    <script>
+let pass=document.getElementById("pass");
+let btn=document.getElementById("btn");
+function showPassword()
+{
+    if(btn.innerHTML=="show")
+{
+    pass.type="text";
+    btn.innerHTML="hide" ;
+}
+else
+{
+    pass.type="password";
+    btn.innerHTML="show" ;
+}
+} 
+</script>
+
 </html>
