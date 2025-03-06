@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Parent Sibiling Demo </title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    h1{
+        text-align: center;
+        padding: 30px 0px;
+    }
+    .faqMid{
+        max-width: 1000px;
+        margin: auto;
+    }
+    .faqItems{
+       border: 1px solid #ccc;
+       margin-bottom: 20px;
+    }
+    .faqItems h3{
+       padding: 15px;
+       background-color: yellowgreen;
+       position: relative;
+       cursor: pointer;
+    }
+    .faqItems h3 span{
+        position: absolute;
+        right: 20px;    }
+    .faqItems p{
+       font-size: 18px;
+       line-height: 30px;
+       padding: 10px;
+       display: none;
+    }
+    .showAns
+    {
+        display: block !important;
+    }
+    </style>
+</head>
+<body>
+    <h1> Frequently Asked Questions </h1>
+    <div class="faqMid">
+        <div class="faqItems">
+            <h3> What Categories are being considered for BOP House Financing? <span>+</span></h3>
+            <p > BOP has categorized House Financing facility in the following categories:
+                1. Purchase of Plot
+                2. Purchase of Constructed House
+                3. Renovation Purposes
+                4. Purchase of Plot and Construction, thereon </p>
+        </div>
+        <div class="faqItems">
+            <h3> What is the Target Market for the finance facility? <span>+</span> </h3>
+            <p> The target market for BOP House Financing includes:
+                1. Salaried Individuals (SI)
+                2. Self Employed Professionals (SEP)
+                3. Self Employed Businessmen (SEB)
+                4. Non-Resident of Pakistan (NRPs) </p> 
+        </div> 
+        <div class="faqItems">
+            <h3> Is it necessary to have Account in The Bank of Punjab? <span>+</span></h3>
+            <p> Yes, it is necessary for the customer to have his Salary A/C or Income Deposit A/C in
+                any of BOP branches. </p> 
+        </div> 
+        <div class="faqItems">
+            <h3> When the Monthly Installment is be deposited? <span>+</span> </h3>
+            <p> The monthly installment should be deposited in your BOP A/C on 5th of every month. </p> 
+        </div>                
+    </div>
+    <script> 
+    let allQuestions=document.querySelectorAll(".faqItems h3")
+        allQuestions.forEach((item ,currentIndex)=>
+    {
+        item.addEventListener("click",()=>
+        {allQuestions.forEach((heading ,i)=>
+            {
+                if(currentIndex!=i)
+            {   heading.lastElementChild.innerHTML="+"
+                heading.nextElementSibling.classList.remove("showAns")
+            }
+            })
+           if(item.lastElementChild.innerHTML=="+")
+        {       item.lastElementChild.innerHTML="-"} 
+            else {
+            item.lastElementChild.innerHTML="+"     }
+                                       
+    item.nextElementSibling.classList.toggle("showAns")
+         })
+    })
+    </script>
+</body>
+</html>
